@@ -1,0 +1,28 @@
+﻿using Windows
+
+Add_Class_Driver_Printer
+{
+    Sleep (2)
+    
+   //Driver from C:\Windows\System32\DriverStore\FileRepository\
+     Windows.Add Printer (HP ENVY 6000,C:\Windows\System32\DriverStore\FileRepository\hpygid31_win10s.inf_amd64_9b681ac7ff2b29d0,hpygid31_Win10S.inf,192.168.4.19)
+    
+     Sleep (2)
+     
+     Windows.Add Printer (HP ENVY 6000,C:\Windows\System32\DriverStore\FileRepository\hpygid31_win10s.inf_amd64_9b681ac7ff2b29d0\hpygid31_Win10S.inf,hpygid31_Win10S,192.168.4.19)
+    
+     Sleep (2)
+     
+   //Driver from HP Basic driver extraction
+   
+     Windows.Add Printer (HP ENVY 6000,C:\Users\Lalitha\Downloads\EN6000\hpygid31_v4.inf,EN6000,192.168.4.19)
+   
+     Sleep (2)
+     
+  // Driver from HP Basic driver extraction special character' _ ' separated "\" 
+  
+    Windows.Add Printer (HP ENVY 6000,C:\Users\Lalitha\Downloads\EN6000\hpygid31\_v4.inf,EN6000,192.168.4.19)
+    
+    Sleep (1)
+}
+ 

@@ -1,0 +1,29 @@
+﻿using Windows
+
+Print_Queue_handling
+{
+
+    If: Windows.Print Job Is Exist (DESKTOP-007BL76 \(HP DeskJet 4100 series\))
+    {
+        Pass (PrintJob 1 exist)
+    }
+    If: Windows.Print Job Is Exist (DESKTOP-007BL76 \(HP ENVY Photo 7800 series\)-Offline)
+    {
+        Pass (PrintJob 2 exist)
+    }
+  Sleep (3)
+  Windows.Resume Current Print Job DESKTOP-007BL76 \(HP ENVY Photo 7800 series\)-Offline)
+  Sleep (3)
+  
+  If: Windows.Print Job Is Exist (KWS1A085 \(HP OfficeJet Pro 8020 series\))
+    {
+        Pass (PrintJob 3 exist)
+    }
+    Sleep (3)
+   
+    Windows.Remove Printer (DESKTOP-007BL76 \(HP ENVY Photo 7800 series\))
+    Sleep (3)                                                       
+    Windows.Delete Current Print Job (DESKTOP-007BL76 \(HP ENVY Photo 7800 series\))
+    sleep (3)
+    Windows.Delete All Jobs In Print Queue (DESKTOP-007BL76 \(HP ENVY Photo 7800 series\))
+}

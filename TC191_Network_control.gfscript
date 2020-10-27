@@ -1,0 +1,17 @@
+﻿using Network_Adapter_Details.gfvar
+using Windows
+using BuiltIn
+HPSmart_Print
+{
+    
+    //Windows.Get Enviornment Variable (OS,${Buffer})
+    //Windows.Get Enviornment Variable (DATE,${Buffer2})
+    Windows.Get Enviornment Variable (PROCESSOR_IDENTIFIER,${Buffer2})
+    Pass (${Buffer2})
+   // BuiltIn.Run Command (ncpa.cpl.,${Buffer3})
+   // BuiltIn.Run Command (wmic nic,${Buffer3})
+   //BuiltIn.Run Command (wmic nic get Name,${Buffer3})
+   //BuiltIn.Run Command (NotifyAddrChange,${Buffer3})
+   //BuiltIn.Run Command As Admin (NotifyAddrChange,${Buffer3})
+   Pass (${Buffer3})
+}

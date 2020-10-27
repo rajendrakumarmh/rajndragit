@@ -1,0 +1,29 @@
+﻿using Windows
+using Hallasan
+
+Add_Printer
+{
+    //Windows.Add Printer (HP ENVY 6000 ,C:\Users\Lalitha\Downloads\EN6000_Basicx64_51.2.4771\hpygid31.inf,hpygid31,192.168.4.19) 
+    
+    Windows.Add Printer (HP ENVY 6000 ,C:\Users\Lalitha\Downloads\EN6000_Basicx64_51.2.4771\hpygid31.inf,hpygid31,192.168.4.19) 
+    
+ 
+    // Hallasan.Add Printer (HP ENVY 6000 All-in-One Printer series,C:\Users\Lalitha\Downloads\EN6000_Basicx64_51.2.4771\hpygid31.inf,192.168.4.19) 
+    
+    //Sleep (2)
+    
+   // Windows.Remove Printer (HP ENVY 6000 series[B1C03C])
+    
+    If: Windows.Print Job Is Exist (HP ENVY 6000 series [B1C03C],)
+    {
+        Pass ("It is print job")  
+        //  Windows.Remove Printer (HP ENVY 6000 series[B1C03C]) 
+    }
+    //Windows.Pause Current Print Job (HP ENVY 6000 series [B1C03C])
+    // Sleep (6)
+    //Windows.Pause Current Print Job (HP ENVY 6000 series [B1C03C])
+    
+    //Windows.Print Job Is Exist (HP ENVY 6000 series [B1C03C],)
+  
+}
+
